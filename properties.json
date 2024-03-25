@@ -1,0 +1,106 @@
+{
+	"properties": [
+        {
+            "id":"prop1",
+			"type":"House",
+            "bedrooms":4,
+			"price":56000,
+			"description":"This impeccably designed super luxury house in Battaramulla offers a grand living experience, featuring four fully air-conditioned and furnished bedrooms.The residence is equipped with a dual hot and cold water supply system, sourced from boththe main road and a well. Comprising four spacious en-suite bedrooms, pantry, kitchen, and visitor's bathroom/toilet, the house exudes sophistication.",
+			"location":"Battramulla",
+			"picture":"images/P4-1.jpg",
+			"url":"Prop1.html",
+            "added": {
+                "month":"January",
+                "day":2,
+                "year":2023
+            }
+        },
+		{
+            "id":"prop2",
+			"type":"House",
+            "bedrooms":3,
+			"price":37500,
+			"description":"This newly listed super luxury house in Athurugiriya presents an unparalleled living experience with its exquisite features. Boasting three fully air-conditioned and furnished bedrooms, the residence encompasses a  sophisticated design that includes a spacious living room, sitting room, family room, prayer area, dining room, and a well-equipped kitchen.",
+			"location":"Athurugiriya",
+			"picture":"images/P3-1.jpg",
+			"url":"Prop2.html",
+            "added": {
+                "month":"January",
+                "day":24,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop3",
+			"type":"Apartment",
+            "bedrooms":3,
+			"price":400000,
+			"description":"These furnished 3-bedroom apartments in Havelock City offer a luxurious and convenient living experience. Each unit is brand new and fully air-conditioned, featuring attached bathrooms, a modern kitchen,and hot water facilities.The property also boasts outstanding amenities, including a swimming pool, fully equipped gyms,newly constructed Kid's Play Area",
+			"location":"Havelock Ciyt",
+			"picture":"images/P7-1.jpg",
+			"url":"Prop3.html",
+            "added": {
+                "month":"February",
+                "day":18,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop4",
+			"type":"Villa",
+            "bedrooms":4,
+			"price":300000,
+			"description":"Experience the epitome of comfort and tranquility with this newly available villa for rent in Mirissa. Boasting four bedrooms and four bathrooms across a single floor, the villa offers a serene living space. The property is fully furnished with high-quality electrical items and hot water geysers. The meticulous timber works add character and warmth to the luxurious ambiance, creating an inviting atmosphere. ",
+			"location":"Mirissa",
+			"picture":"images/P6-1.jpg",
+			"url":"Prop4.html",
+            "added": {
+                "month":"May",
+                "day":21,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop5",
+			"type":"Villa",
+            "bedrooms":5,
+			"price":350000,
+			"description":"Indulge in the epitome of opulence with this luxury villa nestled in the heart of Sigiriya. Boasting five bedrooms across two floors and set on an expansive 95-perch land, the property offers a lavish living experience. The air-conditioned rooms, each with private bathrooms.A fully equipped commercial-grade kitchen caters to culinary enthusiasts, ensuring a gourmet paradise for residents.",
+			"location":"Sigiriya",
+			"picture":"images/P5-1.jpg",
+			"url":"Prop5.html",
+            "added": {
+                "month":"June",
+                "day":15,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop6",
+			"type":"Commercial Buildings",
+			"price":100000,
+			"description":"This commercial building in Dehiwala presents a lucrative investment opportunity with its strategic design and practical features. The two-story structure is meticulously designed, with a spacious tiled hall and small toilet on the ground floor, while the first floor encompasses two tiled rooms, a tiny balcony, and an open floor area designed for potential expansion.",
+			"location":"Dehiwala",
+			"picture":"images/P9-1.jpg",
+			"url":"Prop6.html",
+            "added": {
+                "month":"July",
+                "day":16,
+                "year":2023
+            }
+        },
+        {
+            "id":"prop7",
+			"type":"Commercial Buildings",
+			"price":200000,
+			"description":"This three-story commercial building in Bambalapitiya offers a prime opportunity for businesses seeking a strategic location with top-notch facilities. Priced at LKR 200,000 per month, the property includes essential features such as three bathrooms, fully air-conditioned spaces. With electricity and water costs payable based on actual meter usage, the building provides flexibility and cost efficiency.",
+			"location":"Bambalapitiy",
+			"picture":"images/P8-1.jpg",
+			"url":"Prop7.html",
+            "added": {
+                "month":"Augst",
+                "day":23,
+                "year":2023
+            }
+        }
+]}

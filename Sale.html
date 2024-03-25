@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Nest</title>
+    <link href="All.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+</head>
+<body>
+  <section class="header-A">
+    <nav>
+        <img class="logo1" alt="Logo"  src="logo2.png">
+        <div class="nav-link">
+            <ul>
+              <li><a class="nav" href="SearchPage.html">HOME</a></li>
+              <li><a class="nav" href="Sale.html">SALES</a></li>
+              <li><a class="nav" href="Rent.html">RENTALS</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container4">
+      <h1 class="sale-font">Sales</h1>
+      <p class="description">"Welcome to your home of possibilities.<br> Explore a curated collection of exceptional properties
+         for sale.<br>Find the perfect space to live your dreams, all in one place."</p>
+    </div>
+  </section>
+<div class="container5">
+              <div class="gallery-M" id="property1">
+               <img class="imgM-G" src="P3-1.jpg" alt="m1">
+                 <p class="name-M">Athurugiriya</p>
+                 <p class="name-M">Type:House</p>
+                 <p class="name-M">Price:LKR 37,500</p>
+                 <p class="name-M">This newly listed super luxury house in Athurugiriya presents
+                   an unparalleled living experience with its exquisite features. Boasting three
+                    fully air-conditioned and furnished bedrooms, the residence encompasses a 
+                    sophisticated design that includes a spacious living room, sitting room, family
+                     room, prayer area, dining room, and a well-equipped kitchen. </p>
+                 <!-- Learn More Button with Link to Book.html -->
+                 <a href="Prop2.html"><button class="btnM-G">Details...</button></a>
+                 <button class="btnM-G favorite-btn" onclick="addToFavorites('Athurugiriya', 'House', 'LKR 37,500')">Favorite</button>
+             </div>
+             <!-- Second Book in the Gallery -->
+             <div class="gallery-M">
+               <img class="imgM-G" src="P4-1.jpg" alt="m1">
+               <p class="name-M">Battramulla</p>
+               <p class="name-M">Type:House</p>
+               <p class="name-M">Price:LKR 56,000</p>
+               <p class="name-M">This impeccably designed super luxury house in Battaramulla offers
+                 a grand living experience, featuring four fully air-conditioned and furnished bedrooms.
+                  The residence is equipped with a dual hot and cold water supply system, sourced from both
+                   the main road and a well. Comprising four spacious en-suite bedrooms, pantry, kitchen, and visitor's 
+                   bathroom/toilet, the house exudes sophistication.</p>
+               <a href="Prop1.html"><button class="btnM-G">Details...</button></a>
+               <button class="btnM-G favorite-btn" onclick="addToFavorites('Battramulla', 'House', 'LKR 56,000')">Favorite</button>
+             </div>
+</div> 
+<div class="container6">
+        <!-- First Book in the Gallery -->
+         <div class="gallery-M">
+           <img class="imgM-G" src="P5-1.jpg" alt="m1">
+           <p class="name-M">Sigiriya</p>
+           <p class="name-M">Type:Villa</p>
+           <p class="name-M">Price:LKR 350,000</p>
+           <p class="name-M">Indulge in the epitome of opulence with this luxury villa nestled in the heart of Sigiriya. 
+            Boasting five bedrooms across two floors and set on an expansive 95-perch land, the property offers a 
+            lavish living experience. The air-conditioned rooms, each with private bathrooms.
+             A fully equipped commercial-grade kitchen caters to culinary enthusiasts, ensuring a gourmet paradise for residents.</p>
+             <!-- Learn More Button with Link to Book.html -->
+           <a href="Prop5.html"><button class="btnM-G">Details...</button></a>
+           <button class="btnM-G favorite-btn" onclick="addToFavorites('Sigiriya', 'Villa', 'LKR 350,000')">Favorite</button>
+         </div>
+         <!-- Second Book in the Gallery -->
+         <div class="gallery-M">
+           <img class="imgM-G" src="P9-1.jpg" alt="m1">
+           <p class="name-M">Dehiwala</p>
+           <p class="name-M">Type:Commercial Building</p>
+           <p class="name-M">Price:LKR 100,000</p>
+           <p class="name-M">This commercial building in Dehiwala presents a lucrative investment opportunity with its strategic 
+            design and practical features. The two-story structure is meticulously designed, with a spacious tiled hall and 
+            small toilet on the ground floor, while the first floor encompasses two tiled rooms, a tiny balcony, and an open
+             floor area designed for potential expansion. </p>
+           <a href="Prop6.html"><button class="btnM-G">Details...</button></a>
+           <button class="btnM-G favorite-btn" onclick="addToFavorites('Dehiwala', 'Commercial Building', 'LKR 100,000')">Favorite</button>
+         </div>
+</div>
+<h1 class="for-text"> Favourite Property List</h1>
+<div class="container10">
+  <form class="form3">     
+      <div id="deletebutton">
+          <button type="button" onclick="clearFavorites()">DELETE</button>
+      </div>
+      <ul id="favorites-list"></ul>
+  </form>
+</div>
+<footer>
+  <div class="container3">
+    <div class="top">
+      <div class="logo-details">
+        <span class="logo_name">DREAM NEST - Your sanctuary for serene living</span>
+      </div>
+      <div class="media-icons">
+        <a href="https://web.facebook.com/login/?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div> 
+    </div>
+    <div class="link-boxes">
+      <ul class="box">
+        <li class="link_name">Company</li>
+        <li><a href="#">Dream Nest</a></li>
+        <li><a href="#"> Colombo 7, Sri Lanka </a></li>
+        <li><a href="#">dreamnest.property.com</a></li>
+        <li><a href="#">dreamnest.property@gmail.com</a></li>
+        <li><a href="#">+94 76 310 7113</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Sales</li>
+        <li>Home</li>
+        <li>Apartments</li>
+        <li>Commercial Buildings</li>
+        <li>Villas</li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Rentals</li>
+        <li>Home</li>
+        <li>Apartments</li>
+        <li>Commercial Buildings</li>
+        <li>Villas</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span class="copyright_text">Copyright © 2023 <a href="#">Dream Nest</a>All rights reserved for IIT  Advanced Client-Side Web Development</span>
+      <span class="policy_terms">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms & condition</a>
+      </span>
+    </div>
+  </div>
+</footer> 
+<script src="Favorite.js"></script>
+</body>
+</html>

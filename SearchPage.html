@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Nest</title>
+    <link href="All.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+</head>
+<body>
+        <nav>
+          <img class="logo1" alt="Logo"  src="logo2.png">
+          <div class="nav-link">
+            <ul>
+              <li><a class="nav" href="SearchPage.html">HOME</a></li>
+              <li><a class="nav" href="Sale.html">SALES</a></li>
+              <li><a class="nav" href="Rent.html">RENTALS</a></li>
+            </ul>
+          </div>
+        </nav>
+<div class="container1">
+  <div id="root"></div>
+  <!-- Start of JavaScript code using Babel -->
+  <script type="text/babel">
+
+  // Define a React class named App
+  class App extends React.Component {
+
+    // Event handler for the search functionality
+    handleSearch = (event) => {
+      // Prevent the default form submission behavior
+      event.preventDefault();
+
+      // Get user input values from the form
+      const city = document.querySelector('.city').value;
+      const propertyType = document.querySelector('[name="Property"]').value;
+      const minPrice = document.querySelector('[name="Price"]').value;
+      const maxPrice = document.querySelector('[name="Price"]').value;
+      const minBedrooms = document.querySelector('[name="Bed"]').value;
+      const addedToSite = document.querySelector('[name="AddedToSite"]').value;
+      // Get the id of the selected radio button for sale or rent
+      const saleOrRent = document.querySelector('[name="salerent"]:checked').id;
+
+
+      // Perform search logic here...
+
+      if (propertyType === 'home' && saleOrRent === 'sale') {
+        window.location.href = 'Sale.html'; // Redirect to Sale page for House
+      } else if (propertyType === 'home' && saleOrRent === 'rent') {
+        // Optionally show a message that House for Rent is not available
+        alert("Sorry, House for Rent is not available.");
+      } else if (propertyType === 'apartments' && saleOrRent === 'sale') {
+        // Show a message that Apartments for Sale is not available
+        alert("Sorry, Apartments for Sale is not available.");
+      } else if (propertyType === 'apartments' && saleOrRent === 'rent') {
+        window.location.href = 'Rent.html'; // Redirect to Rent page for Apartments
+      } else if (
+        (propertyType === 'commercial buildings' || propertyType === 'villas') &&
+        saleOrRent === 'sale'
+      ) {
+        window.location.href = 'Sale.html'; // Redirect to Sale page for Commercial Buildings or Villas
+      } else if (
+        (propertyType === 'commercial buildings' || propertyType === 'villas') &&
+        saleOrRent === 'rent'
+      ) {
+        window.location.href = 'Rent.html'; // Redirect to Rent page for Commercial Buildings or Villas
+      } else {
+        // Handle other cases or provide a default behavior
+        alert("Redirect logic for selected options not implemented.");
+      }
+    };
+      render() {
+        return (
+            <form onSubmit={this.handleSearch}>
+              <div className="group">
+                <label htmlFor="fname">City</label>
+                <input type="text" className="city" name="city" />
+              </div>
+              <div className="group">
+                <label htmlFor="min" className="label">
+                  Property Type
+                </label>
+                <select name="Property">
+                  <option value="home">House</option>
+                  <option value="apartments">Apartments</option>
+                  <option value="commercial buildings">Commercial Buildings</option>
+                  <option value="villas">Villas</option>
+                </select>
+              </div>
+              <div className="group">
+                <label htmlFor="min" className="label">
+                  Min Price
+                </label>
+                <select name="Price">
+                  <option value="price">No min</option>
+                  <option value="price">1mn(10lakhs) - 10mn(100lakhs)</option>
+                  <option value="price">11mn(110lakhs) - 20mn(200lakhs)</option>
+                  <option value="price">21mn(210lakhs) - 30mn(300lakhs)</option>
+                  <option value="price">31mn(310lakhs) - 40mn(400lakhs)</option>
+                  <option value="price">41mn(410lakhs) - 50mn(500lakhs)</option>
+                  <option value="price">51mn(510lakhs) - 60mn(600lakhs)</option>
+                  <option value="price">61mn(610lakhs) - 70mn(700lakhs)</option>
+                  <option value="price">71mn(710lakhs) - 80mn(800lakhs)</option>
+                  <option value="price">81mn(810lakhs) - 90mn(900lakhs)</option>
+                  <option value="price">91mn(910lakhs) - 100mn(1000lakhs)</option>
+                </select>
+              </div>
+              <div className="group">
+                <label htmlFor="max" className="label">
+                  Max Price
+                </label>
+                <select name="Price">
+                  <option value="price">No max</option>
+                  <option value="price">1mn(10lakhs) - 10mn(100lakhs)</option>
+                  <option value="price">11mn(110lakhs) - 20mn(200lakhs)</option>
+                  <option value="price">21mn(210lakhs) - 30mn(300lakhs)</option>
+                  <option value="price">31mn(310lakhs) - 40mn(400lakhs)</option>
+                  <option value="price">41mn(410lakhs) - 50mn(500lakhs)</option>
+                  <option value="price">51mn(510lakhs) - 60mn(600lakhs)</option>
+                  <option value="price">61mn(610lakhs) - 70mn(700lakhs)</option>
+                  <option value="price">71mn(710lakhs) - 80mn(800lakhs)</option>
+                  <option value="price">81mn(810lakhs) - 90mn(900lakhs)</option>
+                  <option value="price">91mn(910lakhs) - 100mn(1000lakhs)</option>
+                </select>
+              </div>
+              <div className="group">
+                <label htmlFor="min" className="label">
+                  No. of bedrooms
+                </label>
+                <select name="Bed">
+                  <option value="bed">No</option>
+                  <option value="bed">2</option>
+                  <option value="bed">3</option>
+                  <option value="bed">4</option>
+                  <option value="bed">5</option>
+                </select>
+              </div>
+              <div className="group">
+                <label htmlFor="date" className="label">
+                  Added to site
+                </label>
+                <select name="AddedToSite">
+                  <option value="add">Anytime</option>
+                  <option value="add">23/01/01-23/06/30</option>
+                  <option value="add">23/07/01-23/12/31</option>
+                </select>
+              </div>
+              <div className="flex group">
+                <div className="flex-col">
+                  <input type="radio" name="salerent" id="sale" />
+                  <label htmlFor="sale">Sale</label>
+                </div>
+                <div className="flex-col">
+                  <input type="radio" name="salerent" id="rent" />
+                  <label htmlFor="rent">Rent</label>
+                </div>
+              </div>
+              <div className="flex group">
+                <button className="btn" onclick="searchProperties()">Search</button>
+              </div>
+            </form>
+        );
+      }
+    }
+    ReactDOM.render(<App />, document.getElementById('root'));// Render the React component "App" into the HTML element with the id 'root'
+  </script>
+
+</div>
+<div class="container2">
+  <form class="form2">
+     <h1 class="for-text"> Favourite Property List</h1>
+     <div id="deletebutton">
+        <button type="delete">DELETE</button>
+     </div>
+     <ul id="favorites-list-search"></ul>
+  </form>
+</div>
+
+<footer>
+  <div class="container3">
+    <div class="top">
+      <div class="logo-details">
+        <span class="logo_name">DREAM NEST - Your sanctuary for serene living</span>
+      </div>
+      <div class="media-icons">
+        <a href="https://web.facebook.com/login/?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
+        <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den"><i class="fab fa-twitter"></i></a>
+        <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+      </div> 
+    </div>
+    <div class="link-boxes">
+      <ul class="box">
+        <li class="link_name">Company</li>
+        <li><a href="#">Dream Nest</a></li>
+        <li><a href="#"> Colombo 7, Sri Lanka </a></li>
+        <li><a href="#">dreamnest.property.com</a></li>
+        <li><a href="#">dreamnest.property@gmail.com</a></li>
+        <li><a href="#">+94 76 310 7113</a></li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Sales</li>
+        <li>Home</li>
+        <li>Apartments</li>
+        <li>Commercial Buildings</li>
+        <li>Villas</li>
+      </ul>
+      <ul class="box">
+        <li class="link_name">Rentals</li>
+        <li>Home</li>
+        <li>Apartments</li>
+        <li>Commercial Buildings</li>
+        <li>Villas</li>
+      </ul>
+    </div>
+  </div>
+  <div class="bottom-details">
+    <div class="bottom_text">
+      <span class="copyright_text">Copyright © 2023 <a href="#">Dream Nest</a>All rights reserved for IIT  Advanced Client-Side Web Development</span>
+      <span class="policy_terms">
+        <a href="#">Privacy policy</a>
+        <a href="#">Terms & condition</a>
+      </span>
+    </div>
+  </div>
+</footer>
+<script src="Favorite.js"></script>   
+<script>
+        var data ={
+            "properties": [
+              {
+                "id":"prop1",
+                "type":"House",
+                "bedrooms":4,
+                "price":56000,
+                "description":"This impeccably designed super luxury house in Battaramulla offers a grand living experience, featuring four fully air-conditioned and furnished bedrooms.The residence is equipped with a dual hot and cold water supply system, sourced from boththe main road and a well. Comprising four spacious en-suite bedrooms, pantry, kitchen, and visitor's bathroom/toilet, the house exudes sophistication.",
+                "location":"Battramulla",
+                "picture":"P4-1.jpg",
+                "url":"Prop1.html",
+                "added": {
+                    "month":"January",
+                    "day":2,
+                    "year":2023
+                }
+              },
+              {
+                "id":"prop2",
+                "type":"House",
+                "bedrooms":3,
+                "price":37500,
+                "description":"This newly listed super luxury house in Athurugiriya presents an unparalleled living experience with its exquisite features. Boasting three fully air-conditioned and furnished bedrooms, the residence encompasses a  sophisticated design that includes a spacious living room, sitting room, family room, prayer area, dining room, and a well-equipped kitchen.",
+                "location":"Athurugiriya",
+                "picture":"P3-1.jpg",
+                "url":"Prop2.html",
+                "added": {
+                    "month":"January",
+                    "day":24,
+                    "year":2023
+                }
+              },
+              {
+                "id":"prop3",
+                "type":"Apartment",
+                "bedrooms":3,
+                "price":400000,
+                "description":"These furnished 3-bedroom apartments in Havelock City offer a luxurious and convenient living experience. Each unit is brand new and fully air-conditioned, featuring attached bathrooms, a modern kitchen,and hot water facilities.The property also boasts outstanding amenities, including a swimming pool, fully equipped gyms,newly constructed Kid's Play Area",
+                "location":"Havelock Ciyt",
+                "picture":"P7-1.jpg",
+                "url":"Prop3.html",
+                "added": {
+                    "month":"February",
+                    "day":18,
+                    "year":2023
+                }
+              },
+              {
+                "id":"prop4",
+                "type":"Villa",
+                "bedrooms":4,
+                "price":300000,
+                "description":"Experience the epitome of comfort and tranquility with this newly available villa for rent in Mirissa. Boasting four bedrooms and four bathrooms across a single floor, the villa offers a serene living space. The property is fully furnished with high-quality electrical items and hot water geysers. The meticulous timber works add character and warmth to the luxurious ambiance, creating an inviting atmosphere. ",
+                "location":"Mirissa",
+                "picture":"P6-1.jpg",
+                "url":"Prop4.html",
+                "added": {
+                    "month":"May",
+                    "day":21,
+                    "year":2023
+                }
+              },
+              {
+                "id":"prop5",
+                "type":"Villa",
+                "bedrooms":5,
+                "price":350000,
+                "description":"Indulge in the epitome of opulence with this luxury villa nestled in the heart of Sigiriya. Boasting five bedrooms across two floors and set on an expansive 95-perch land, the property offers a lavish living experience. The air-conditioned rooms, each with private bathrooms.A fully equipped commercial-grade kitchen caters to culinary enthusiasts, ensuring a gourmet paradise for residents.",
+                "location":"Sigiriya",
+                "picture":"P5-1.jpg",
+                "url":"Prop5.html",
+                "added": {
+                    "month":"June",
+                    "day":15,
+                    "year":2023
+                }
+              },
+              {
+                "id":"prop6",
+                "type":"Commercial Buildings",
+                "price":100000,
+                "description":"This commercial building in Dehiwala presents a lucrative investment opportunity with its strategic design and practical features. The two-story structure is meticulously designed, with a spacious tiled hall and small toilet on the ground floor, while the first floor encompasses two tiled rooms, a tiny balcony, and an open floor area designed for potential expansion.",
+                "location":"Dehiwala",
+                "picture":"P9-1.jpg",
+                "url":"Prop6.html",
+                "added": {
+                    "month":"July",
+                    "day":16,
+                    "year":2023
+                }
+              },
+              {
+                "id":"prop7",
+                "type":"Commercial Buildings",
+                "price":200000,
+                "description":"This three-story commercial building in Bambalapitiya offers a prime opportunity for businesses seeking a strategic location with top-notch facilities. Priced at LKR 200,000 per month, the property includes essential features such as three bathrooms, fully air-conditioned spaces. With electricity and water costs payable based on actual meter usage, the building provides flexibility and cost efficiency.",
+                "location":"Bambalapitiy",
+                "picture":"P8-1.jpg",
+                "url":"Prop7.html",
+                "added": {
+                    "month":"Augst",
+                    "day":23,
+                    "year":2023
+                }
+              }
+            ]
+        }
+</script>
+</body>
+</html>

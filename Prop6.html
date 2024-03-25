@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dream Nest</title>
+    <link href="All.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <script src="https://unpkg.com/react@17/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@17/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6.26.0/babel.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&libraries=places&callback=initMap" async defer></script>
+</head>
+<body>
+    <section class="header-C">
+        <nav>
+            <img class="logo1" alt="Logo"  src="logo2.png">
+            <div class="nav-link">
+                <ul>
+                  <li><a class="nav" href="SearchPage.html">HOME</a></li>
+                  <li><a class="nav" href="Sale.html">SALES</a></li>
+                  <li><a class="nav" href="Rent.html">RENTALS</a></li>
+                </ul>
+            </div>
+        </nav>    
+    </section>
+    <section class="header-D">
+    <div class="container9">
+      <div class="welcome-text9">
+        <!-- Full-width images with number text -->
+        <div class="mySlides">
+          <div class="numbertext">1 / 8</div>
+            <img  src="P9-1.jpg" >
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">2 / 8</div>
+            <img src="P9-2.jpg" >
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">3 / 8</div>
+            <img src="P9-3.jpg" >
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">4 / 8</div>
+            <img src="P9-4.jpg" >
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">5 / 8</div>
+            <img src="P9-5.jpg">
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">6 / 8</div>
+              <img src="P9-7.jpg" >
+        </div>
+
+        <div class="mySlides">
+            <div class="numbertext">7 / 8</div>
+              <img src="P9-8.jpg" >
+        </div>
+      
+        <div class="mySlides">
+          <div class="numbertext">8 / 8</div>
+            <img src="P9-10.jpg" >
+        </div>
+      
+        <!-- Next and previous buttons -->
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+      
+        <!-- Thumbnail images -->
+        <div class="row">
+          <div class="column">
+            <img class="demo cursor" src="P9-1.jpg"  onclick="currentSlide(1)" alt="Pic">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="P9-2.jpg"  onclick="currentSlide(2)" alt="Pic">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="P9-3.jpg"  onclick="currentSlide(3)" alt="Pic">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="P9-4.jpg"  onclick="currentSlide(4)" alt="Pic">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="P9-5.jpg"  onclick="currentSlide(5)" alt="Pic">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="P9-7.jpg"  onclick="currentSlide(6)" alt="Pic">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="P9-8.jpg"  onclick="currentSlide(7)" alt="Pic">
+          </div>
+          <div class="column">
+            <img class="demo cursor" src="P9-10.jpg"  onclick="currentSlide(8)" alt="Pic">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container11">
+        <div class="column11">
+            <div class="welcome-text11">
+              <h3 target>Commercial Building for sale</h3>
+              <h3>LKR 100,000</h3>
+              <ul>
+                <li>Address: Dehiwala</li>
+                <li>Bathrooms: 1</li>
+                <li>Price per sq.ft:LKR 17,000</li>
+                <Li>No. of floors: 2</Li>
+                <li>Posted on 16 July 2023 9:00 am</li>
+                <li>Postcode Area: YT9 </li>
+                <li>Availability: Available Now</li>
+                <li>Designed to two storied building and base, beams, columns and reinforcement put accordingly.</li>
+                <li>Down floor :large tiled hall small toilet and wash room.</li>
+                <li>1st floor: two tiled rooms,tiny balcony+open floor area (In the open floor area columns already put for the remaining part of the roof slab.)</li>
+                <li>Front Side & Back Side parking Space</li>
+                <li>Ground Floor Can be used Parking Space for 9 Vehicle</li>
+                <li>Each floor is equipped of AC and a separate electrical transformer.</li>
+              </ul>
+            </div>
+            <div class="welcome-text11">
+              <h3 target>Description</h3>
+              <p class="des">This commercial building in Dehiwala presents a lucrative investment opportunity with its strategic 
+                design and practical features. The two-story structure is meticulously designed, with a spacious tiled hall and 
+                small toilet on the ground floor, while the first floor encompasses two tiled rooms, a tiny balcony, and an open
+                 floor area designed for potential expansion. Offering convenient parking space both in the front and back, the 
+                 ground floor is capable of accommodating nine vehicles, enhancing accessibility for businesses. Each floor is equipped
+                  with air conditioning, ensuring a comfortable working environment, and a separate electrical transformer enhances 
+                  operational efficiency. With its adaptable layout and prime location, this commercial building is well-suited
+                   for various business ventures, making it an ideal prospect for investors or entrepreneurs looking to establish a presence in Dehiwala.</p>
+            </div>
+            <div id="welcome-text13"></div>
+            <script type="text/babel">
+              class App extends React.Component {
+                render() {
+                  return (
+                    <div>
+                      <div id="map" style={{ height: '450px', width: '600px' }}>
+                        <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31690.251724479982!2d79.83754392651915!3d6.85682897914953!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae25a5564a141a5%3A0xafce957923f34d9e!2sDehiwala!5e0!3m2!1sen!2slk!4v1704823891867!5m2!1sen!2slk"
+                        width="1335"
+                        height="450"
+                        style={{ border: 0 }}
+                        allowFullScreen=""
+                        loading="lazy"
+                        referrerPolicy="no-referrer-when-downgrade"
+                        ></iframe>
+                      </div><br/>
+                        <img
+                          src="c5.jpg" // Replace with the actual path to your image
+                          alt="Description of your image"
+                          style={{ width: '1335px', height: '400px' }}
+                        />
+                    </div>
+                  );
+                }
+              }
+            
+              // Render the App component into the welcome-text11 div
+              ReactDOM.render(<App />, document.getElementById('welcome-text13'));
+            </script> 
+        </div>    
+      </div> 
+  </section>
+  <footer>
+    <div class="container3">
+      <div class="top">
+        <div class="logo-details">
+          <span class="logo_name">DREAM NEST - Your sanctuary for serene living</span>
+        </div>
+        <div class="media-icons">
+          <a href="https://web.facebook.com/login/?_rdc=1&_rdr"><i class="fab fa-facebook-f"></i></a>
+          <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F%3Flang%3Den"><i class="fab fa-twitter"></i></a>
+          <a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div> 
+      </div>
+      <div class="link-boxes">
+        <ul class="box">
+          <li class="link_name">Company</li>
+          <li><a href="#">Dream Nest</a></li>
+          <li><a href="#"> Colombo 7, Sri Lanka </a></li>
+          <li><a href="#">dreamnest.property.com</a></li>
+          <li><a href="#">dreamnest.property@gmail.com</a></li>
+          <li><a href="#">+94 76 310 7113</a></li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Sales</li>
+          <li>Home</li>
+          <li>Apartments</li>
+          <li>Commercial Buildings</li>
+          <li>Villas</li>
+        </ul>
+        <ul class="box">
+          <li class="link_name">Rentals</li>
+          <li>Home</li>
+          <li>Apartments</li>
+          <li>Commercial Buildings</li>
+          <li>Villas</li>
+        </ul>
+      </div>
+    </div>
+    <div class="bottom-details">
+      <div class="bottom_text">
+        <span class="copyright_text">Copyright © 2023 <a href="#">Dream Nest</a>All rights reserved for IIT  Advanced Client-Side Web Development</span>
+        <span class="policy_terms">
+          <a href="#">Privacy policy</a>
+          <a href="#">Terms & condition</a>
+        </span>
+      </div>
+    </div>
+  </footer>    
+  <script src="Main.js"></script>      
+</body>
+</html>
